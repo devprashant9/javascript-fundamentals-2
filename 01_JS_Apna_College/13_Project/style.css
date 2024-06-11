@@ -1,0 +1,118 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Georgia;
+}
+
+body {
+  background-color: mediumseagreen;
+}
+
+.main-container {
+  background-color: slateblue;
+  margin: 15px;
+  padding: 100px;
+  width: 300px;
+  border-radius: 20px;
+}
+
+.main-container h2 {
+  color: white;
+}
+
+form .amount {
+  padding: 10px;
+  color: rgb(255, 213, 0);
+  font-size: 20px;
+}
+
+form input {
+  border: none;
+  outline: none;
+  width: 200px;
+  border-radius: 10px;
+  height: 35px;
+  margin: 5px;
+  outline: none;
+  font-size: 20px;
+}
+
+
+.dropdown {
+  display: flex;
+  justify-content: space;
+}
+
+.from p {
+  margin-left: 20px;
+  color: white;
+}
+
+.to p {
+  margin-left: 50px;
+  color: white;
+}
+
+.dropdown i {
+  position: relative;
+  top: 30px;
+  color: white;
+  font-size: 20px;
+}
+
+.from img {
+  width: 40px;
+  margin-left: 20px;
+}
+
+.to img {
+  width: 40px;
+  margin-left: 40px;
+}
+
+.from select {
+  position: relative;
+  top: 20px;
+  right: 50px;
+  width: 50px;
+  height: 25px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  cursor: pointer;
+}
+
+.to select {
+  position: relative;
+  top: 20px;
+  right: 50px;
+  width: 50px;
+  height: 25px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.msg {
+  margin-top: 30px;
+  color: white;
+  padding-left: 70px;
+}
+
+form button {
+  margin: 20px;
+  border: none;
+  width: 150px;
+  height: 35px;
+  background-color: mediumseagreen;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  margin-left: 50px;
+  cursor: pointer;
+}

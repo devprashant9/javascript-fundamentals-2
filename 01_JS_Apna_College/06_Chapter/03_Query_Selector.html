@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+    <style>
+        #heading {
+            color: pink;
+        }
+
+        .text {
+            color: mediumseagreen;
+        }
+
+        p {
+            color: mediumpurple;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">I am Heading</h1>
+
+    <p class="text">I am Paragraph</p>
+    <p class="text">I Love Javascript</p>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, nam.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla velit ipsam non ipsum officiis obcaecati et, explicabo totam optio aut!</p>
+</body>
+<script>
+    const paragraphs = document.querySelector("p");
+    console.dir(paragraphs);
+
+    const allParagraphs = document.querySelectorAll("p");
+    console.dir(allParagraphs); // returns NodeList
+
+    const getId = document.querySelector("#heading");
+    console.dir(getId)
+
+    const getClass = document.querySelectorAll(".text");
+    console.log(getClass);
+
+</script>
+</html>
+
+<!-- 
+
+    document.querySelector("myId / myClass / tag"): returns first occurrence
+
+    document.querySelectorAll("myId / myClass / tag"): returns a NodeList
+
+
+
+-->

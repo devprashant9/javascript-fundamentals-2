@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    function api () {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("Weather Data");
+                resolve(200);
+            }, 4000);
+        })
+    }
+
+    // await api(); //cannot be used like this
+
+
+        async function getWeatherdata () {
+            await api();
+            await api();
+        }
+
+//-------------------------------- example of async function --------
+    async function hello () {
+        console.log("Hello");
+    }
+
+        //hello(): execute in browser it will return a promise
+
+</script>
+</html>
+
+<!-- 
+        async functin always returns a promise
+
+        await pauses the execution of its surrounding function until the promise is settled
+
+        await is used only inside async function
+
+-->

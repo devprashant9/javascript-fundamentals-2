@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    //
+
+
+    function getData(dataId, getNextData) {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          console.log(`Data: ${dataId}`);
+          resolve("Success");
+          if (getNextData) {
+            getNextData();
+          }
+        }, 5000);
+      });
+    }
+
+    /* 
+    
+    let value = getData(123) // Use this in Console. It will resturn data after 5 seconds
+
+    value: it will show pending state and undefined
+
+    value: it will show succes with value 123
+
+        type the first two lines immediately
+
+    */
+
+
+    //
+  </script>
+</html>

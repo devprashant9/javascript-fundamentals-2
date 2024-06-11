@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    class Car {
+      constructor() {
+        console.log("Object Making in Process");
+      }
+
+      start() {
+        console.log("Start");
+      }
+
+      stop() {
+        console.log("Stop");
+      }
+    }
+
+    let fortuner = new Car();
+    let thar = new Car();
+    let benz = new Car();
+  </script>
+</html>
+
+<!-- 
+        constructor is by default called when object of the class is created if we don't declare it
+
+        it is used to initialize objects
+
+        constructor is created for each individual object
+
+        if you run this code then in browsers console you will be able to see the "object making in process" 3 times since we have created 3 objects
+
+-->

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class Parent {
+        hello() {
+            console.log("Hello");
+        }
+
+    }
+    class Child1 extends Parent {
+    }
+
+    class Child2 extends Parent {
+        hello () {
+            console.log("Child Class Method");
+        }
+    }
+    
+    let child1 = new Child1 ();
+    child1.hello(); // it will call the hello method of parent class
+
+    let child2 = new Child2();
+    child2.hello(); // it will call the child2 class hello() method and this process of overwriting parent class method is known as {method overriding}
+
+
+
+
+</script>
+</html>
+
+<!-- 
+        If "child" and "parent" have same method then "child's" method will be used also this processis known as [Method Overriding]
+
+-->

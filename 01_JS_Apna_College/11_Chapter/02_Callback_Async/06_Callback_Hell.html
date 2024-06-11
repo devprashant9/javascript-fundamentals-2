@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    //--------------------------------
+    function getData(dataId, getNextData) {
+        setTimeout(() => {
+            console.log(`Data: ${dataId}`);
+            if(getNextData) {
+                getNextData();
+            }
+        }, 2000);
+    }
+
+    //------------------------- Case 1 --------
+        // getData(1);
+        // getData(2);
+        // getData(3);
+    //-------------------------- Case 2 ---------
+
+        // getData(999, getData(2)); 
+        
+        // This is Invalid: 2 will be Printed First and both of them will also be logged at the same time
+
+    //------------------------ Case 3 ----------
+
+            getData(999, () => {
+                getData(99, () => {
+                    getData(9, () => {
+                        getData(9999);
+                    });
+                });
+            });
+
+    //------------ callback inside callback --------
+</script>
+</html>
+
+<!-- 
+        suppose we have a scenario where we have {1, 2, 3} as data
+
+        we want to retrive them with a delay of 2 seconds
+
+        data 1 needs to be fetched after 2 seconds, 
+        
+        data 2 needs to be fetched after data 1 is fetched and that also after 2 seconds
+
+        same for data 3
+
+        In above function if we call like this
+            getData(1)
+            getData(2)
+            getData(3)
+        
+        all three of them will be called after 3 seconds. but our case is different
+
+-->
+

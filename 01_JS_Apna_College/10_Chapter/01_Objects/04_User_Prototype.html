@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const employee = {
+        calTax () {
+            console.log("Tax Rate is 10%");
+        },
+    };
+
+    const Prashant = {
+        salary: 60000,
+        calTax: function () {
+            console.log("Tax Rate is 20%")
+        }
+    };
+
+    Prashant.__proto__ = employee;
+    console.log(Prashant);
+
+    
+    
+</script>
+</html>
+
+<!--        User Defined Prototype
+
+    1.) Here the scenario is same but the thing is since "Prashant's" salary is little higher it comes under 20% tax slab
+
+    2.) Now the catch is both "employee object" and "prashant object", have the same function name
+
+    3.) which of them will be called??
+
+    4.) If you go to browsers console and log "Prashant.calTax()", it will return you "The Tax rate is 20%"
+
+    5.) take a note that it will not be overwriiten the prototype will still have the "calTax()" method of employee object. and Prashant will also have a "calTax ()" of its own. So both of them exists.
+
+    6.) So we can conclude that priority is given to self method od the object if methods have same name
+
+-->

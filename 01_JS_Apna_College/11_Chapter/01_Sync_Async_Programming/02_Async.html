@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    //--------------------------------- Method 1 ----------------
+    function hello() {
+      console.log("I am getting executed after 2 seconds");
+      console.log("=======================");
+    }
+    setTimeout(hello, 2000);
+
+    //----------------------------------- Method 2 ----------------
+
+    setTimeout(() => {
+        console.log("I am Getting executed after 3 seconds");
+        console.log("======================");
+    }, 3000);
+
+    // --------------- Notice the below given code --------------
+    
+    console.log("I am Outside SetTimeout and Written First");
+    setTimeout(() => {
+        console.log("I am Getting executed after 4 seconds");
+        console.log("======================");
+    }, 4000);
+    console.log("I am outside setTimeout and Written Second");
+
+    // the two log will run Synchronously and rest will run Asynchronously
+
+    // They will not wait for the other instruction to execute
+
+  </script>
+</html>
+
+<!-- 
+
+                        setTimeout(callback, miliseconds);
+
+        Asynchronous: Due to Synchronous Programming, sometimes important instructions get blocked due to some previous instructions, which causes a delay in the UI. Asynchronous code execution allows to execute next instructions immediately and doesn't bloxk the flow
+-->

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // class is a program-code tempelate for creating objects
+
+    // it is used to create objects of similar type which have some state(variables) and behaviours(methods)
+
+    class Car {
+
+      start() {
+        console.log("Start");
+      }
+
+      stop() {
+        console.log("Stop");
+      }
+
+      brand(brand) {
+        this.brandName = brand;
+        console.log(this.brandName);
+
+        //"this" is being used so that we could set brand name for each individual object when they gets created
+
+        //if you dont use "this" it will throw you error
+
+        /* In most places you will find that 
+            brand(brand) {
+                this.brand = brand;
+                console.log(this.brandName);
+      }
+                you notice that all variables are same but the argument passed as "brand" and the right side "brand" means the same.
+
+                however "this.brand" is a different variable. it does not give error because it becomes local variable to that object which is being called because of this keyword
+
+                you can use any name after "this" keyword
+
+                this.brandName = brand
+                this.name = brand
+                thi.carBrand = brand
+        
+        
+        */
+      }
+    }
+
+    let fortuner = new Car();
+    let thar = new Car();
+    let benz = new Car();
+    benz.brandName("Mercedes");
+
+    // to use methods just write object name . method name (Do this in browsers terminal)
+
+    //Eg: benz.start(), thar.stop(), fortuner.start(), fortuner.stop()
+  </script>
+</html>
+
+<!-- 
+  Run this in browsers console and type fortuner, it will print will Toyota {} object
+
+  Now when you will see the prototype of toyota object you will notice that the "start () and stop ()", methods are also present
+
+  Now if you log "fortuner.start()", it will print "Start"
+
+  So the "fortuner object" has inherited all the methods of the "class Toyota". In order to use them you just need to call them
+
+  So its providing code resuability
+
+  you can create miltiple such objects and all of tjem will inherit the methods of class froom which the object is being created
+
+-->

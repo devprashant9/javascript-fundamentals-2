@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        font-family: Georgia;
+        box-sizing: border-box;
+      }
+      .heading {
+        width: 100%;
+        height: 60px;
+        background-color: mediumseagreen;
+      }
+
+      .heading p {
+        color: white;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bolder;
+        padding: 20px;
+      }
+
+      .input {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .rock,
+      .paper,
+      .scissor {
+        width: 150px;
+        height: 150px;
+        margin-top: 70px;
+      }
+
+      .rock:hover,
+      .paper:hover,
+      .scissor:hover {
+        transform: scale(1.1);
+      }
+
+      .rock {
+        background-image: url("rock.png");
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+
+      .paper {
+        background-image: url("paper.png");
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+      .scissor {
+        background-image: url("scissors.png");
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+      .status {
+        width: 400px;
+        height: 45px;
+        background-color: mediumpurple;
+        font-size: 20px;
+        padding: 10px;
+        text-align: center;
+        border-radius: 10px;
+        align-items: center;
+        color: white;
+        cursor: pointer;
+      }
+
+      .stats {
+        margin-left: 600px;
+        margin-top: 200px;
+      }
+
+      .you,
+      .computer,
+      .you-score,
+      .computer-score {
+        font-size: larger;
+        font-weight: bolder;
+      }
+
+      .score {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 100px;
+      }
+
+      .you-score,
+      .computer-score {
+        position: relative;
+        top: 30px;
+        right: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading"><p>Rock Paper Scissors</p></div>
+
+      <div class="input">
+        <div class="rock"></div>
+        <div class="paper"></div>
+        <div class="scissor"></div>
+      </div>
+
+      <div class="score">
+        <p class="you">You</p>
+        <p class="you-score">0</p>
+        <p class="computer">Computer</p>
+        <p class="computer-score">0</p>
+      </div>
+
+      <div class="stats">
+        <p class="status">Pick Your Move</p>
+      </div>
+    </div>
+    <script>
+      let outputs = ["rock", "paper", "scissor"];
+      let userScore = 0;
+      let computerScore = 0;
+
+      let rock = document.querySelector(".rock");
+      let paper = document.querySelector(".paper");
+      let scissor = document.querySelector(".scissor");
+
+      let userScoreDisplay = document.querySelector(".you-score");
+      let computerScoreDisplay = document.querySelector(".computer-score");
+      let status = document.querySelector(".status");
+
+      function computerChoice() {
+        return outputs[Math.floor(Math.random() * outputs.length)];
+      }
+
+      function playGame(userChoice) {
+        let compChoice = computerChoice();
+        if (userChoice === compChoice) {
+          status.textContent = `It's a draw! Both chose ${userChoice}.`;
+        } else if (
+          (userChoice === "rock" && compChoice === "scissor") ||
+          (userChoice === "paper" && compChoice === "rock") ||
+          (userChoice === "scissor" && compChoice === "paper")
+        ) {
+          userScore++;
+          userScoreDisplay.textContent = userScore;
+          status.textContent = `You win! ${userChoice} beats ${compChoice}.`;
+        } else {
+          computerScore++;
+          computerScoreDisplay.textContent = computerScore;
+          status.textContent = `You lose! ${compChoice} beats ${userChoice}.`;
+        }
+      }
+
+      rock.addEventListener("click", () => playGame("rock"));
+      paper.addEventListener("click", () => playGame("paper"));
+      scissor.addEventListener("click", () => playGame("scissor"));
+    </script>
+  </body>
+</html>

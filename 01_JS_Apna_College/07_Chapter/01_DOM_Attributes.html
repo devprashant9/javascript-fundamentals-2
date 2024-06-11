@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">This is a Div</div>
+    <p class="para">Thi is a Paragraph</p>
+</body>
+<script>
+
+    let element = document.querySelector("div");
+    console.log(element);
+
+    let element_attr = element.getAttribute("id");
+    console.log(element_attr);
+
+    console.log(element.setAttribute("id", "box-1"));
+
+</script>
+</html>
+
+<!-- 
+
+        getAttribute(attr) // to set the attribute value
+
+        setAttribute(attr, value) //to set the attribute value
+
+
+-->

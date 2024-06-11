@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <div>This is a div.
+        <ul>
+            List
+                <Li>Item 1</Li>
+                <Li>Item 2</Li>
+                <Li>Item 3</Li>
+        </ul>
+    </div>
+</body>
+<script>
+    let btn = document.createElement("button");
+    btn.innerText = "Adding After Div !";
+
+    let div = document.querySelector("div");
+    div.append(btn);
+
+    let div1 = document.createElement("div");
+    div1.innerText = "I am Added Before Unordered List";
+
+    let list = document.querySelector("ul");
+    list.prepend(div1);
+</script>
+</html>
+
+<!-- 
+        always create a new element before adding
+        
+        let el = document.createElement("div");
+        node.append(el) // adds to end (inside)
+        node.prepend(el) // adds to start (insde)
+        node.before(el) // adds to before (outside)
+        node.after(el)  // adds to after (outside)
+
+        
+
+-->

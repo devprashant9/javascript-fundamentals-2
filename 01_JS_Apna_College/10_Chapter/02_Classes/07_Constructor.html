@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    class Car {
+
+      constructor(mileage, brand) {
+        console.log("Creating new Object");
+        this.mileage = mileage;
+        this.brand = brand;
+      }
+
+      start() {
+        console.log("Start");
+      }
+
+      stop() {
+        console.log("Stop");
+      }
+    }
+
+    let fortuner = new Car(20, "fortuner");
+    console.log(fortuner);
+    let thar = new Car(30, "thar");
+    console.log(thar);
+    let benz = new Car(25);
+    console.log(benz);
+  </script>
+</html>
+
+<!-- 
+        if you log any object in browsers console you will be able to see respective arguments as output
+
+        constructor basically does the job which is needed during initialization
+
+        we can also assign value to constructor later
+
+        as you can see we are not passing argument in 3rd object. so it will show undefined. but we can simply do it by (benz.brand = 'mercedes') {try this in browsers console}
+
+        we can even pass multiple parameters to constructor
+
+-->

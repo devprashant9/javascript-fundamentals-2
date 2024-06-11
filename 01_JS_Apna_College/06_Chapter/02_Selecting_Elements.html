@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+    <style>
+        #heading {
+            color: pink;
+        }
+
+        .text {
+            color: mediumseagreen;
+        }
+
+        p {
+            color: mediumpurple;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">I am Heading</h1>
+
+    <p class="text">I am Paragraph</p>
+    <p class="text">I Love Javascript</p>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, nam.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla velit ipsam non ipsum officiis obcaecati et, explicabo totam optio aut!</p>
+</body>
+<script>
+    const  byId = document.getElementById("heading");
+    console.dir(byId); //If no element present returns null
+
+    const byClassName = document.getElementsByClassName("text");
+    console.dir(byClassName); // returns HTML Collections || If no elemt present returns empty collection
+
+    const byTagName = document.getElementsByTagName("p");
+    console.dir(byTagName); // returns HTML Collections
+</script>
+</html>
+
+<!-- 
+
+    selecting with id: document.getElementById("myId")
+
+    selecting with class: document.getElementByClassName("myClass");
+
+    selecting with tag: document.getElementByTagName("p")
+
+
+
+-->

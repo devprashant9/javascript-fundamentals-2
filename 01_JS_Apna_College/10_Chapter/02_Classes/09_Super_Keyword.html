@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class Parent {
+        constructor () {
+            console.log("Parent Class Constructor");
+        }
+        hello() {
+            console.log("I am parent Class");
+        }
+
+    }
+    class Child1 extends Parent {
+        constructor () {
+            console.log("Enter Child Constructor");
+            super();
+            console.log("Child1 Constructor");
+            console.log("Exit Child Constructor");
+        }
+        play () {
+            console.log("Child1 Loves to Play");
+        }
+    }
+    
+    let child1 = new Child1 ();
+
+</script>
+</html>
+
+<!-- 
+        super keyword is used to call constructor of parents class to access properties and methods of parents class
+
+        if the child class also has a constructor then we need to invoke the parent class constructor also or else program will throw error
+
+        super keyword is used to invoke parent class method
+
+-->

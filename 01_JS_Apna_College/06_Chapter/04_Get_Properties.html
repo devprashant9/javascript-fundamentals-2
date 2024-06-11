@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation</title>
+    <style>
+      #heading {
+        color: pink;
+      }
+
+      .text {
+        color: mediumseagreen;
+      }
+
+      p {
+        color: mediumpurple;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="heading">I am Heading</h1>
+
+    <p class="text">I am Paragraph</p>
+
+    <div>
+      <p>I Love Javascript</p>
+      <p>JS is Programming Language</p>
+      <p>Node JS is Run Time Environment</p>
+    </div>
+
+    <p class="hide" style="visibility: hidden;">I am Hidden</p>
+
+  </body>
+  <script>
+    let headingTag = document.querySelector("#heading");
+    console.dir(headingTag.tagName);
+
+    let allText = document.querySelector("div");
+    console.dir(allText.innerText); // only prints text
+    console.dir(allText.innerHTML); // prints text with tags also
+
+    let hidden = document.querySelector(".hide");
+    console.dir(hidden.textContent);
+  </script>
+</html>
+
+<!-- 
+
+    --------- Properties --------
+        
+        tagName: returns tag for element nodes
+        
+        innerText: returns text content of the element and all its children
+        
+        innerHTML: returns the plain text or HTML contents in the element
+        
+        textContent: returns textual content even for hidden elements
+
+
+
+-->

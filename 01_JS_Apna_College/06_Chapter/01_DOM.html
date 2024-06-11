@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 1</title>
+    <style>
+        h1 {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM Tutorial</h1>
+</body>
+<script>
+    // console.log(window);
+    // window.console.log("hello 2");
+    // window.alert("I am Alert");
+    console.log(window.document);
+</script>
+</html>
+
+<!-- 
+
+    Window Objcet: represents open window in a browser. It is browsers object and not javascripts obect. Automatically Created by Browser.
+        It is  aglobal objects with lots of properties and methods
+
+                                <!DOCTYPE html>
+                                <html lang="en">
+                                <head>
+                                    <meta charset="UTF-8">
+                                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                    <title>DOM 1</title>
+                                    <link rel="stylesheet" href="style.css">
+                                </head>
+                                <body>
+                                    <div>
+                                        <img src="image.png" alt="">
+                                        <h1> Hi </h1>
+                                        <p> Paragraph </p>
+                                        <div> </div>
+                                    </div>
+                                </body>
+                                <script>
+                                    console.log(window);
+                                    window.console.log("hello 2");
+                                    window.alert("I am Alert");
+                                </script>
+                                </html>
+
+
+                                             THE DOM TREE for above HTML CODE
+                                            ----------------------------------
+
+                                                            WINDOW
+                                                               /
+                                                            Document
+                                                              /
+                                                            HTML
+                                                        /          \
+                                                Head                    Body
+                                            /     |    \                /  \
+                                        meta    title   link        div     script
+                                                                |   \ \  \  
+                                                            img    h1  p   div
+
+
+
+
+
+
+
+-->

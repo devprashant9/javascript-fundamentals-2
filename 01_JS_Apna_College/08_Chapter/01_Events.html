@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: mediumseagreen;
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="console.log('Button Was Clicked')">Click Me</button>
+    <button ondblclick="console.log('Button Was Double Clicked'); alert('Button Was Double Clicked');">Click Me Twice</button>
+
+    <div class="box" onmouseover="console.log('Cursor Inside Div')">This is a Box</div>
+</body>
+</html>

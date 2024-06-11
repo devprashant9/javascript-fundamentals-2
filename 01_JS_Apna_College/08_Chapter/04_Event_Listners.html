@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Click Me</button>
+</body>
+<script>
+    let btn = document.querySelector("button");
+    
+    btn.addEventListener("click", () => {
+        console.log("Button is Clicked with Handler - 1");
+    });
+
+    let handler2 = () => {
+        console.log("Button is Clicked with Handler - 2");
+    };
+
+    btn.addEventListener("click", handler2);
+
+    btn.removeEventListener("click", handler2);
+</script>
+</html>
+
+<!-- 
+        node.eventListner(event, callback)
+
+        node.removeEventListner(event, callback) //callback must be exactly same
+        
+-->

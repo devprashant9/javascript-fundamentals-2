@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // let a = 5;
+    // let b = 10;
+    // console.log("a = ", a);
+    // console.log("a = ", b);
+    // console.log("a + b : ", a+b);
+    // console.log("a + b : ", a+b);
+    // console.log("a + b : ", a+b+c); //error
+    // console.log("a + b : ", a+b);
+    // console.log("a + b : ", a+b);
+    // console.log("a + b : ", a+b);
+
+    // what happens in above scenario is first four log commands get printed but since there is a mistake on 5th log commands which in return stops the whole execution process
+
+    //that isnt good because again from  6th line the code is coorect
+
+    //for that reason we need to handle only error part of the program and that swhu=y th error handling is used
+
+
+
+    let a = 5;
+    let b = 10;
+    console.log("a = ", a);
+    console.log("a = ", b);
+    console.log("a + b : ", a+b);
+    console.log("a + b : ", a+b);
+    
+    try {
+        console.log("a + b : ", a+b+c); //error
+    }
+    catch (error) {
+        console.log(error);
+    }
+
+    console.log("a + b : ", a+b);
+    console.log("a + b : ", a+b);
+    console.log("a + b : ", a+b);
+</script>
+</html>

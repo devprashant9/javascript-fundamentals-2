@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toogle Case</title>
+</head>
+<style>
+    .buttons {
+        width: 85px;
+        height: 45px;
+        color: white;
+        background-color: mediumseagreen;
+        font-size: 15px;
+        border: 1px solid tomato;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <button id="btn-1" class="buttons">Light Mode</button>
+    <button id="btn-2" class="buttons">Dark Mode</button>
+    <p>My Name is Prashant</p>
+</body>
+<script>
+    let button1 = document.querySelector("#btn-1");
+    let button2 = document.querySelector("#btn-2");
+
+    let body = document.querySelector("body");
+    
+    button1.addEventListener("click", () => {
+        body.style.backgroundColor = "white";
+        body.style.color = "black";
+    });
+
+    button2.addEventListener("click", () => {
+        body.style.backgroundColor = "black";
+        body.style.color = "white";
+    });
+
+
+</script>
+</html>

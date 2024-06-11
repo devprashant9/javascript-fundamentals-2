@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //------------------ Method 1 --------------
+    // function hello (a, b) {
+    //     console.log(`Sum is ${a+b}`);
+    // }
+
+    // function sum(a, b, hello) {
+    //     hello(a, b);
+        
+    // }
+    // sum(1, 5, hello); //sum(1, 5, hello()) is not valid. Only Use Names
+
+    //------------------  Method 2  -------------------
+
+    function sum(a, b, callback) {
+        let result = a + b;
+        callback(result);  
+    }
+    sum(19, 10, (result) => {
+        console.log(`Method 2: ${result}`);
+    });
+
+
+</script>
+</html>
+
+<!-- Function passed as an argumemt to other function -->

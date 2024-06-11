@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const student = {
+        name: "Prashant",
+        age: 24,
+        marks: 91.5,
+        printMarks: function () {
+            console.log(`Marks is ${this.marks}`)
+        }
+    };
+
+    console.log(student);
+    console.log(student.printMarks());
+
+    console.log(typeof(toString(this.marks)));
+        // here take a note that we never declared or made "toString()" method inside "student object", still we are able to use it. It is so because this property is already defined inside the "prototype object", which is already defined in Javascript. This object gets created automatically.
+</script>
+</html>
+
+<!-- When you run this code inside browser you will get the desired output and when you click on the small dropdown arrow button in console you will see "prototype: object" already there which we never defined -->
+
+
+<!-- 
+    Object is an entity having state and behaviour (properties and methods)
+
+    JS object have a special property called "Prototype"
+-->

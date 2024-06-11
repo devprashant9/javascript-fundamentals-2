@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let promise = new Promise((resolve, reject) => {
+        console.log("I am a Promise");
+
+        /* If you log promise in browsers console it will show you the {Prototype, State & Result} */
+
+        // resolve("Success");
+        
+        reject("Error Occurred");
+    });
+</script>
+</html>
+
+<!-- 
+
+            Solution to Callback Hell
+
+        Promise: Object
+                let promise = new Promise((resolve, reject) => {});
+
+        resolve and reject are callbacks provided by js
+
+        States of Promise:
+            pending:
+            fulfilled:
+            rejected:
+-->

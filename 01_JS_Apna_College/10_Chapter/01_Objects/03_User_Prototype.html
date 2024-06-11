@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const employee = {
+        calTax () {
+            console.log("Tax Rate is 10%");
+        },
+    };
+
+    const Prashant = {
+        salary: 40000,
+    };
+
+    const Girish = {
+        salary: 30000,
+    };
+
+    const Nikhil = {
+        salary: 35000,
+    }
+
+    Prashant.__proto__ = employee;
+    console.log(Prashant);
+
+    Girish.__proto__ = employee;
+    Nikhil.__proto__ = employee;
+    
+    
+</script>
+</html>
+
+<!--        User Defined Prototype
+
+    1.) In the above scenario we want to calculate tax rate of (Prashant, Girish, Nikhil) by implementing "employee's object", "calTax ()" method
+
+    2.) So this can be done easily if there is some means to add the "calTax ()" method to protype of the "Prashant's object or Girish's Object". And then simply we can call it for every employee. 
+    
+    3.) But the question is how to add the "calTax ()" method to the prototype of ("Prashant's Object Prototype")
+
+    4.) Prashant.__proto__ = employee; this line will add the "calTax ()" method to "Prashant's Object's Prototype"
+
+    5.) Now if you log "Prashant", you will be able to see that "calTax ()", method has been added to the prototype
+
+    6.) Now if you log in browser "Prashant.calTax()", you will see that it willl print "Tax Rate is 10%"
+
+    prototype is reference to the object so either it exists or remains null which means it dont carry any reference
+
+-->
